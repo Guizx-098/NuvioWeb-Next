@@ -1,7 +1,7 @@
 services:
   nuvioweb:
     container_name: nuvioweb
-    image: ghcr.io/alphasquare404/nuvioweb:stable
+    image: ghcr.io/guizx-098/nuvioweb:stable
     environment:
       NUVIO_SUPABASE_URL: ${NUVIO_SUPABASE_URL:-}
       NUVIO_SUPABASE_ANON_KEY: ${NUVIO_SUPABASE_ANON_KEY:-}
@@ -40,7 +40,7 @@ services:
 
   trakt-auth-bridge:
     container_name: nuvioweb-trakt-auth-bridge
-    image: ghcr.io/alphasquare404/nuvioweb-trakt-auth-bridge:stable
+    image: ghcr.io/guizx-098/nuvioweb-trakt-auth-bridge:stable
     environment:
       TRAKT_CLIENT_ID: ${TRAKT_CLIENT_ID:-}
       TRAKT_CLIENT_SECRET: ${TRAKT_CLIENT_SECRET:-}
@@ -49,14 +49,14 @@ services:
 
   mdblist-bridge:
     container_name: nuvioweb-mdblist-bridge
-    image: ghcr.io/alphasquare404/nuvioweb-mdblist-bridge:stable
+    image: ghcr.io/guizx-098/nuvioweb-mdblist-bridge:stable
     environment:
       MDBLIST_CLIENT_ID: ${MDBLIST_CLIENT_ID:-}
     restart: unless-stopped
 
   debrid-api-bridge:
     container_name: nuvioweb-debrid-api-bridge
-    image: ghcr.io/alphasquare404/nuvioweb-debrid-api-bridge:stable
+    image: ghcr.io/guizx-098/nuvioweb-debrid-api-bridge:stable
     environment:
       NUVIO_SUPABASE_URL: ${NUVIO_SUPABASE_URL:-}
       NUVIO_SUPABASE_ANON_KEY: ${NUVIO_SUPABASE_ANON_KEY:-}
@@ -65,7 +65,7 @@ services:
 
   external-return-bridge:
     container_name: nuvioweb-external-return-bridge
-    image: ghcr.io/alphasquare404/nuvioweb-external-return-bridge:stable
+    image: ghcr.io/guizx-098/nuvioweb-external-return-bridge:stable
     restart: unless-stopped
     environment:
       NUVIO_WEB_PUSH_PUBLIC_KEY: ${NUVIO_WEB_PUSH_PUBLIC_KEY:-}
@@ -77,7 +77,7 @@ services:
   # token is configured. Reached only through nginx on /api/transcode.
   transcode-bridge:
     container_name: nuvioweb-transcode-bridge
-    image: ghcr.io/alphasquare404/nuvioweb-transcode-bridge:stable
+    image: ghcr.io/guizx-098/nuvioweb-transcode-bridge:stable
     restart: unless-stopped
     environment:
       # open (anyone), token (shared secret), lan (private addresses only).

@@ -20,7 +20,7 @@
 
 ## About
 
-NuvioWeb is an independent, GPL-3.0-licensed community fork of Nuvio, maintained by alphasquare.
+NuvioWeb is an independent, GPL-3.0-licensed community fork of Nuvio, maintained by Guizx-098.
 
 It provides a client-side playback interface with support for the Stremio addon ecosystem, enabling content discovery and source resolution through user-installed extensions.
 
@@ -37,7 +37,7 @@ NuvioWeb is based on the original Nuvio project and preserves credit and attribu
 ### Setup
 
 ```bash
-git clone https://github.com/alphasquare404/NuvioWeb.git
+git clone https://github.com/Guizx-098/NuvioWeb-Next.git
 cd NuvioWeb
 npm install
 ```
@@ -76,11 +76,11 @@ mkdir -p nuvioweb
 cd nuvioweb
 
 curl -fsSL \
-  https://raw.githubusercontent.com/alphasquare404/NuvioWeb/web/docker-compose.yml \
+  https://raw.githubusercontent.com/Guizx-098/NuvioWeb-Next/main/docker-compose.yml \
   -o docker-compose.yml
 
 curl -fsSL \
-  https://raw.githubusercontent.com/alphasquare404/NuvioWeb/web/.env.example \
+  https://raw.githubusercontent.com/Guizx-098/NuvioWeb-Next/main/.env.example \
   -o .env
 ```
 
@@ -93,13 +93,14 @@ docker compose up -d
 docker compose ps
 ```
 
-`docker compose ps` should show these five NuvioWeb services running:
+`docker compose ps` should show these six NuvioWeb services running:
 
 - `nuvioweb`
 - `nuvioweb-trakt-auth-bridge`
 - `nuvioweb-mdblist-bridge`
 - `nuvioweb-debrid-api-bridge`
 - `nuvioweb-external-return-bridge`
+- `nuvioweb-transcode-bridge`
 
 Open `http://SERVER_IP:4173`. Set `NUVIO_PORT` in `.env` before starting if
 you need a different host port. You can also edit `.env` for Simkl, Premiumize,
@@ -142,12 +143,12 @@ for Docker/static hosting, CORS/Range requirements, and client resource limits.
 ### Release Channels
 
 Use the default `:stable` tag for normal self-hosting. To switch channels, edit
-all five `image:` tags in `docker-compose.yml` to the same tag before pulling.
+all six `image:` tags in `docker-compose.yml` to the same tag before pulling.
 
 | Tag | Meaning |
 | --- | --- |
 | `stable` | Recommended. Latest official release. |
-| `nightly` | Latest development build from `web`; may be unstable. |
+| `nightly` | Latest development build from `main`; may be unstable. |
 | `latest` | Most recently published project build, whether development or release. |
 | `X.Y.Z` | Pinned immutable release, such as `0.1.0`. |
 | `desktop` | Temporary legacy compatibility alias. |
@@ -183,7 +184,7 @@ docker compose up -d
 With `:stable`, this updates to the newest official release. With `:nightly`,
 it updates to the newest `web` development build. With `:latest`, it updates to
 whichever project build was published most recently. A pinned tag such as
-`:0.1.0` remains pinned until you edit all four image tags manually.
+`:0.1.0` remains pinned until you edit all six image tags manually.
 
 ### Reverse Proxy
 
@@ -238,23 +239,23 @@ For comprehensive legal information, including our full disclaimer, third-party 
 
 ## Star History
 
-<a href="https://star-history.dera.page/#alphasquare404/NuvioWeb&type=date&legend=top-left">
+<a href="https://star-history.dera.page/#Guizx-098/NuvioWeb-Next&type=date&legend=top-left">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://star-history.dera.page/svg?repos=alphasquare404/NuvioWeb&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://star-history.dera.page/svg?repos=alphasquare404/NuvioWeb&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://star-history.dera.page/svg?repos=alphasquare404/NuvioWeb&type=date&legend=top-left" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://star-history.dera.page/svg?repos=Guizx-098/NuvioWeb-Next&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://star-history.dera.page/svg?repos=Guizx-098/NuvioWeb-Next&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://star-history.dera.page/svg?repos=Guizx-098/NuvioWeb-Next&type=date&legend=top-left" />
  </picture>
 </a>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/alphasquare404/NuvioWeb.svg?style=for-the-badge
-[contributors-url]: https://github.com/alphasquare404/NuvioWeb/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/alphasquare404/NuvioWeb.svg?style=for-the-badge
-[forks-url]: https://github.com/alphasquare404/NuvioWeb/network/members
-[stars-shield]: https://img.shields.io/github/stars/alphasquare404/NuvioWeb.svg?style=for-the-badge
-[stars-url]: https://github.com/alphasquare404/NuvioWeb/stargazers
-[issues-shield]: https://img.shields.io/github/issues/alphasquare404/NuvioWeb.svg?style=for-the-badge
-[issues-url]: https://github.com/alphasquare404/NuvioWeb/issues
-[license-shield]: https://img.shields.io/github/license/alphasquare404/NuvioWeb.svg?style=for-the-badge
-[license-url]: https://github.com/alphasquare404/NuvioWeb/blob/web/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/Guizx-098/NuvioWeb-Next.svg?style=for-the-badge
+[contributors-url]: https://github.com/Guizx-098/NuvioWeb-Next/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Guizx-098/NuvioWeb-Next.svg?style=for-the-badge
+[forks-url]: https://github.com/Guizx-098/NuvioWeb-Next/network/members
+[stars-shield]: https://img.shields.io/github/stars/Guizx-098/NuvioWeb-Next.svg?style=for-the-badge
+[stars-url]: https://github.com/Guizx-098/NuvioWeb-Next/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Guizx-098/NuvioWeb-Next.svg?style=for-the-badge
+[issues-url]: https://github.com/Guizx-098/NuvioWeb-Next/issues
+[license-shield]: https://img.shields.io/github/license/Guizx-098/NuvioWeb-Next.svg?style=for-the-badge
+[license-url]: https://github.com/Guizx-098/NuvioWeb-Next/blob/main/LICENSE

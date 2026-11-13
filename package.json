@@ -5,16 +5,16 @@
   "version": "0.2.2",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alphasquare404/NuvioWeb.git"
+    "url": "git+https://github.com/Guizx-098/NuvioWeb-Next.git"
   },
   "bugs": {
-    "url": "https://github.com/alphasquare404/NuvioWeb/issues"
+    "url": "https://github.com/Guizx-098/NuvioWeb-Next/issues"
   },
-  "homepage": "https://github.com/alphasquare404/NuvioWeb",
+  "homepage": "https://github.com/Guizx-098/NuvioWeb-Next",
   "nuvioFork": {
     "upstreamVersion": "0.3.35",
     "upstreamRepository": "https://github.com/NuvioMedia/NuvioWeb",
-    "maintainer": "alphasquare",
+    "maintainer": "Guizx-098",
     "defaultBranch": "main"
   },
   "scripts": {
